@@ -21,6 +21,20 @@ public struct Pair : IComparable<Pair>
         Power = power;
     }
 
+    public int CompareTo(Pair other, bool isCheckPower)
+    {
+        if (isCheckPower && other.Power < Power) return -1;
+        if (isCheckPower && other.Power > Power) return 1;
+
+        if (other.First < First) return 1;
+        if (other.First > First) return -1;
+
+        if (other.Second < Second) return 1;
+        if (other.Second > Second) return -1;
+
+        else return 0;
+    }
+
     public int CompareTo(Pair other)
     {
         if (other.Power < Power) return -1;

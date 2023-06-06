@@ -12,14 +12,25 @@ public static class Extension
     {
         a = Set<Pair>.Intersection(a, b);
     }
-    public static void Union(this Set<int> a, Set<int> b)
+
+    public static void Intersection(this SetInt a, SetInt b)
     {
-        a = Set<int>.Union(a, b);
+        a = SetInt.Intersection(a, b);
     }
 
-    public static void Union(this Set<int> a, int b)
+    public static void Difference(this SetInt a, SetInt b)
+    { 
+        a = SetInt.Difference(a, b);
+    }
+
+    public static void Union(this SetInt a, SetInt b)
     {
-        a = Set<int>.Union(a, b);
+        a = SetInt.Union(a, b);
+    }
+
+    public static void Union(this SetInt a, int b)
+    {
+        a = SetInt.Union(a, b);
     }
 
     public static void Union(this Set<Pair> a, Set<Pair> b)
